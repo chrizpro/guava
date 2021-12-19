@@ -1,3 +1,5 @@
+using System;
+using Guava;
 using NUnit.Framework;
 
 namespace GuavaTest;
@@ -10,8 +12,10 @@ public class StringsTest
     }
 
     [Test]
-    public void Test1()
+    public void PadStartTest()
     {
-        Assert.Pass();
+        String name = null;
+    
+        Strings.PadStart(null, 10, ' ');
     }
 }
