@@ -53,7 +53,7 @@ public class Strings
     /// <returns> string itself if it is nonempty; null if it is empty or null </returns>
     public static String EmptyToNull(String str)
     {
-        if (!str.Equals(String.Empty)) return str;
+        if (!String.Empty.Equals(str)) return str;
         return null!;
     }
 
@@ -72,10 +72,9 @@ public class Strings
     /// </summary>
     /// <param name="str"> the string to test and possibly return </param>
     /// <returns> string itself if it is non-null; "" if it is null </returns>
-    public static String NullToEmpty(String str)
+    public static string? NullToEmpty(string? str)
     {
-        if (!str.Equals(null)) return str;
-        return String.Empty;
+        return (str == null) ? string.Empty : str;
     }
 
     /// <summary>
@@ -88,7 +87,7 @@ public class Strings
     /// case the input string is always returned.</param>
     /// <param name="padChar"> the character to append to the end of the result until the minimum length is reached</param>
     /// <returns></returns>
-    /// <exception cref="ArgumentException"> String cannot be null</exception>
+    /// <exception cref="ArgumentException"> String cannot be null </exception>
     public static String PadEnd(String str, int minLength, Char padChar)
     {
         if (str.Equals(null)) throw new ArgumentException("Cannot be null", nameof(str));
@@ -108,7 +107,7 @@ public class Strings
     ///  in which case the input string is always returned.</param>
     /// <param name="padChar"> the character to insert at the beginning of the result until the minimum length is reached </param>
     /// <returns> Returns a string, of length at least minLength, consisting of string prepended with as many copies of padChar as are necessary to reach that length</returns>
-    /// <exception cref="ArgumentException"></exception>
+    /// <exception cref="ArgumentException"> String cannot be null </exception>
     public static String PadStart(String str, int minLength, Char padChar)
     {
         if (str.Equals(null)) throw new ArgumentException("Cannot be null", nameof(str));

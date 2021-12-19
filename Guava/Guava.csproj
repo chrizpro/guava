@@ -4,6 +4,21 @@
         <TargetFramework>net6.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
+        <PackageId>CW.Guava</PackageId>
+        <Title>Guava.Net</Title>
+        <Authors>Christopher Williams</Authors>
+        <Description>The goal of this package is to provide you with some of your favorite Java Guava classes, to be used in C#. This doesn't include all classes, but you can expect to find all methods for the classes created.</Description>
+        <RepositoryUrl>https://github.com/chrizpro/guava</RepositoryUrl>
+        <RepositoryType>GitHub</RepositoryType>
+        <PackageTags>Guava, Strings</PackageTags>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="docfx.console" Version="2.58.9">
+        <PrivateAssets>all</PrivateAssets>
+        <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      </PackageReference>
+    </ItemGroup>
 
 </Project>
